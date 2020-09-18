@@ -24,9 +24,7 @@ public class Servicio implements Serializable {
     private String observacion;
     private double precio;
     private boolean isEfectivo;
-
-	@Transient
-	private String unique_deviceId;
+    private String imgPlantilla;
     
     public Servicio() {
     	
@@ -88,20 +86,20 @@ public class Servicio implements Serializable {
 		this.precio = precio;
 	}
 
-	public String getUnique_deviceId() {
-		return unique_deviceId;
-	}
-
-	public void setUnique_deviceId(String unique_deviceId) {
-		this.unique_deviceId = unique_deviceId;
-	}
-
 	public boolean isEfectivo() {
 		return isEfectivo;
 	}
 
 	public void setEfectivo(boolean isEfectivo) {
 		this.isEfectivo = isEfectivo;
+	}
+	
+	public String getImgPlantilla() {
+		return imgPlantilla;
+	}
+
+	public void setImgPlantilla(String imgPlantilla) {
+		this.imgPlantilla = imgPlantilla;
 	}
 
 	private static final long serialVersionUID = 1L;
