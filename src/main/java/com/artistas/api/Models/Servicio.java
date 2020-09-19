@@ -22,7 +22,6 @@ public class Servicio implements Serializable {
     private Long empleadoId;
     private ArrayList <Long> servicios = new ArrayList<>();
     private String observacion;
-    private double precio;
     private boolean isEfectivo;
     private String imgPlantilla;
     
@@ -76,14 +75,6 @@ public class Servicio implements Serializable {
 
 	public void setObservacion(String observacion) {
 		this.observacion = observacion;
-	}
-
-	public double getPrecio() {
-		return precio;
-	}
-
-	public void setPrecio(double precio) {
-		this.precio = precio;
 	}
 
 	public boolean isEfectivo() {

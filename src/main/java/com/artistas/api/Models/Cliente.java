@@ -39,6 +39,7 @@ public class Cliente implements Serializable {
 	private String tratamiento;
 	private String alimentacion;
 	private String otros;
+	private String firma;
 	
 	public Cliente() {
 		
@@ -234,6 +235,14 @@ public class Cliente implements Serializable {
 
 	public void setOtros(String otros) {
 		this.otros = otros;
+	}
+
+	public String getFirma() {
+		return firma;
+	}
+
+	public void setFirma(String firma) {
+		this.firma = firma;
 	}
 
 	private static final long serialVersionUID = 1L;
