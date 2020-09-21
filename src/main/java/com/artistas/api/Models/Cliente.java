@@ -40,6 +40,7 @@ public class Cliente implements Serializable {
 	private String alimentacion;
 	private String otros;
 	private String firma;
+	private String reglas;
 	
 	public Cliente() {
 		
@@ -243,6 +244,14 @@ public class Cliente implements Serializable {
 
 	public void setFirma(String firma) {
 		this.firma = firma;
+	}
+
+	public String getReglas() {
+		return reglas;
+	}
+
+	public void setReglas(String reglas) {
+		this.reglas = reglas;
 	}
 
 	private static final long serialVersionUID = 1L;
