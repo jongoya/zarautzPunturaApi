@@ -24,6 +24,11 @@ public class Servicio implements Serializable {
     private String observacion;
     private boolean isEfectivo;
     private String imgPlantilla;
+    private String selector;
+    private ArrayList <Long> sistemas = new ArrayList<>();
+    private String meridianos;
+    private String equilibrio;
+    private String imgPlantilla2;
     
     public Servicio() {
     	
@@ -92,6 +97,48 @@ public class Servicio implements Serializable {
 	public void setImgPlantilla(String imgPlantilla) {
 		this.imgPlantilla = imgPlantilla;
 	}
+
+	public String getSelector() {
+		return selector;
+	}
+
+	public void setSelector(String selector) {
+		this.selector = selector;
+	}
+
+	public ArrayList<Long> getSistemas() {
+		return sistemas;
+	}
+
+	public void setSistemas(ArrayList<Long> sistemas) {
+		this.sistemas = sistemas;
+	}
+
+	public String getMeridianos() {
+		return meridianos;
+	}
+
+	public void setMeridianos(String meridianos) {
+		this.meridianos = meridianos;
+	}
+
+	public String getEquilibrio() {
+		return equilibrio;
+	}
+
+	public void setEquilibrio(String equilibrio) {
+		this.equilibrio = equilibrio;
+	}
+
+	public String getImgPlantilla2() {
+		return imgPlantilla2;
+	}
+
+	public void setImgPlantilla2(String imgPlantilla2) {
+		this.imgPlantilla2 = imgPlantilla2;
+	}
+
+
 
 	private static final long serialVersionUID = 1L;
 }
