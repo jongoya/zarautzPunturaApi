@@ -17,6 +17,10 @@ public class TipoServicio implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long servicioId;
     private String nombre;
+    private Long numCabinas;
+    private boolean bloqueaTerapeuta;
+    private int duracion;
+    private Long terapeuta;
 	
 	@Transient
 	private String unique_deviceId;
@@ -49,5 +53,37 @@ public class TipoServicio implements Serializable {
 		this.unique_deviceId = unique_deviceId;
 	}
 
+	public Long getNumCabinas() {
+		return numCabinas;
+	}
+
+	public void setNumCabinas(Long numCabinas) {
+		this.numCabinas = numCabinas;
+	}
+
+	public boolean isBloqueaTerapeuta() {
+		return bloqueaTerapeuta;
+	}
+
+	public void setBloqueaTerapeuta(boolean bloqueaTerapeuta) {
+		this.bloqueaTerapeuta = bloqueaTerapeuta;
+	}
+
+	public int getDuracion() {
+		return duracion;
+	}
+
+	public void setDuracion(int duracion) {
+		this.duracion = duracion;
+	}
+
+	public Long getTerapeuta() {
+		return terapeuta;
+	}
+
+	public void setTerapeuta(Long terapeuta) {
+		this.terapeuta = terapeuta;
+	}
+	
 	private static final long serialVersionUID = 1L;
 }
