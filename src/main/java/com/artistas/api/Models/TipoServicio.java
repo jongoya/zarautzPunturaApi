@@ -21,6 +21,7 @@ public class TipoServicio implements Serializable {
     private boolean bloqueaTerapeuta;
     private int duracion;
     private Long terapeuta;
+    private double precio;
 	
 	@Transient
 	private String unique_deviceId;
@@ -85,5 +86,15 @@ public class TipoServicio implements Serializable {
 		this.terapeuta = terapeuta;
 	}
 	
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+
+
 	private static final long serialVersionUID = 1L;
 }
