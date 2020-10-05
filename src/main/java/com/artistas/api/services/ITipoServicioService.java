@@ -10,4 +10,5 @@ public interface ITipoServicioService {
 	public ArrayList<TipoServicio> saveTipoServicios(ArrayList<TipoServicio> tipoServicios);
 	public TipoServicio findByTipoServicioId(Long id);
 	public void deleteTipoServicios(ArrayList<TipoServicio> tipoServicios);
+	public TipoServicio updateTipoServicio(TipoServicio servicio);
 }

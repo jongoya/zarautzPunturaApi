@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.artistas.api.Models.Servicio;
 import com.artistas.api.Models.TipoServicio;
 import com.artistas.api.dao.ITipoServicioDao;
 
@@ -41,5 +42,10 @@ public class TipoServicioServiceImpl implements ITipoServicioService {
 	@Override
 	public void deleteTipoServicios(ArrayList<TipoServicio> tipoServicios) {
 		tipoServicioDao.deleteAll(tipoServicios);
+	}
+
+	@Override
+	public TipoServicio updateTipoServicio(TipoServicio servicio) {
+		return tipoServicioDao.save(servicio);
 	}
 }
