@@ -18,11 +18,13 @@ import com.artistas.api.security.JwtValidator;
 import com.artistas.api.services.IEmpleadoService;
 import com.artistas.api.services.ILoginService;
 import com.artistas.api.services.IServicioService;
+import com.artistas.api.services.ITipoServicioService;
 import com.artistas.api.Commons.CommonFunctions;
 import com.artistas.api.Commons.Constants;
 import com.artistas.api.Models.Empleado;
 import com.artistas.api.Models.EmpleadoMasServicios;
 import com.artistas.api.Models.Servicio;
+import com.artistas.api.Models.TipoServicio;
 
 @RestController
 @RequestMapping("/api")
@@ -33,6 +35,9 @@ public class EmpleadoController {
 	
 	@Autowired
 	private IServicioService servicioService;
+	
+	@Autowired
+	private ITipoServicioService tipoServicioService;
 	
 	@Autowired
 	private ILoginService loginService;
@@ -118,6 +123,15 @@ public class EmpleadoController {
 				for (Servicio servicio : servicios) {
 					servicio.setEmpleadoId(empleadoJefe.getEmpleadoId());
 				}
+				
+				ArrayList<TipoServicio> tipoServicios = tipoServicioService.findAll();
+				for (TipoServicio tipoServicio : tipoServicios) {
+					if (tipoServicio.getTerapeuta() == empleado.getEmpleadoId()) {
+						tipoServicio.setTerapeuta(empleadoJefe.getEmpleadoId());
+					}
+				}
+				
+				tipoServicioService.saveTipoServicios(tipoServicios);
 				
 				resultados = servicioService.saveServicios(servicios);
 			}

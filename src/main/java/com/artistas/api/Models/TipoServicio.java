@@ -22,6 +22,9 @@ public class TipoServicio implements Serializable {
     private int duracion;
     private Long terapeuta;
     private double precio;
+    private Long red_color_value;
+    private Long green_color_value;
+    private Long blue_color_value;
 	
 	@Transient
 	private String unique_deviceId;
@@ -94,7 +97,29 @@ public class TipoServicio implements Serializable {
 		this.precio = precio;
 	}
 
+	public Long getRed_color_value() {
+		return red_color_value;
+	}
 
+	public void setRed_color_value(Long red_color_value) {
+		this.red_color_value = red_color_value;
+	}
+
+	public Long getGreen_color_value() {
+		return green_color_value;
+	}
+
+	public void setGreen_color_value(Long green_color_value) {
+		this.green_color_value = green_color_value;
+	}
+
+	public Long getBlue_color_value() {
+		return blue_color_value;
+	}
+
+	public void setBlue_color_value(Long blue_color_value) {
+		this.blue_color_value = blue_color_value;
+	}
 
 	private static final long serialVersionUID = 1L;
 }
